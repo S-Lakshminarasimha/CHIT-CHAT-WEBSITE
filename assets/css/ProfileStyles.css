@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+}
+nav div i {
+  margin-right: 10px;
+}
+nav h1 {
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+nav div, nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 90px;
+  margin-right: 135px;
+  background-color: #6d6dfa;
+}
+
+#content {
+  display: flex;
+  padding: 50px 100px;
+}
+#content #left-sec {
+  padding: 8px;
+  width: 20%;
+  border: 3px solid #cecece;
+  overflow-y: auto;
+}
+#content #left-sec #users_online div {
+  padding: 10px;
+  background-color: #6d6dfa;
+  color: white;
+  margin-top: 5px;
+}
+#content #left-sec #online_header {
+  background-color: #6d6dfa;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+#content #right-sec {
+  width: 75%;
+  margin-left: 20px;
+}
+#content #chat_box {
+  width: 100%;
+  height: 60vh;
+  border: 3px solid #cecece;
+}
+#content #user_input {
+  margin-top: 5px;
+}
+#content #user_input input {
+  width: 75%;
+  height: 50px;
+  padding: 10px 20px;
+  border: 3px solid #cecece;
+  font-size: 1.2rem;
+}
+#content #user_input input::placeholder {
+  font-size: 1.2rem;
+}
+#content #user_input button {
+  width: 24.5%;
+  color: white;
+  height: 50px;
+  padding: 10px 20px;
+  border: 2px solid #6d6dfa;
+  background-color: #6d6dfa;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#chat_messages {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+#chat_messages div {
+  width: 100%;
+  display: grid;
+  margin-bottom: 25px;
+}
+#chat_messages div li {
+  list-style: none;
+  width: fit-content;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#chat_messages div li[data-user=sender] {
+  background-color: mediumaquamarine;
+  justify-self: flex-end;
+}
+#chat_messages div li[data-user=receiver] {
+  background-color: salmon;
+  justify-self: flex-start;
+}
+#chat_messages div li[data-user=new_member] {
+  color: black;
+  justify-self: center;
+  padding: 5px 20px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ProfileStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Profile Page</title>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <%=user.username%>
+            </div>
+            <h1>CHIT-CHAT</h1>
+            <a href="/logout">LOG OUT</a>
+        </nav>
+        <div id="content">
+            <div id="left-sec">
+                <div id="online_header">
+                    <div>ONLINE</div>
+                    <div id="online"></div>
+                </div>
+                <div id="users_online">
+                    
+                </div>
+            </div>
+            <div id="right-sec">
+                <div id="chat_box">
+                    <ul id="chat_messages">
+                        
+                    </ul>
+                </div>
+                <div id="user_input">
+                    <input type="text" placeholder="Type something ...." id="chat" required autocomplete="off">
+                    <button onclick="chatengine.sendMessage()">SEND</button> 
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="/javascript/chat_engine.js"></script>
+
+    <script>
+        chatengine = new ChatEngine("<%=user.username%>")
+    </script>
+    
+</body>
+</html>
