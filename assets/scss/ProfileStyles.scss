@@ -82,6 +82,7 @@ nav{
     }
     #user_input{
         margin-top:5px;
+        display: flex;
         input{
             width:75%;
             height:50px;
@@ -94,7 +95,7 @@ nav{
             }
         }
         button{
-            width:24.5%;
+            width:25%;
             color:white;
             height:50px;
             padding:10px 20px;
@@ -106,8 +107,6 @@ nav{
     }
 
 }
-
-
 
 #chat_messages{
     width:100%;
@@ -146,3 +145,80 @@ nav{
     
 }
 
+@media only screen and (max-width:600px)  {
+    nav{
+        justify-content:space-between;
+        h1{
+            display: none;
+        }
+        div,a{
+            margin-left: 0;
+            margin-right: 0;
+            padding:5px 10px;
+        }
+    }
+
+    #content{
+        padding:0px;
+        #left-sec{
+            display: none;
+        }
+
+        #right-sec{
+            margin-left: 0;
+            width:100%;
+
+            #chat_box{
+                height:79vh;
+            }
+        }
+        #user_input{
+            display: flex;
+            align-items: center;
+            input{
+                margin-right: 0;
+                padding: 5px 10px;
+                width:70%;
+                outline: none;
+                font-size: 1rem;
+            }
+            button{
+                padding:8px 10px;
+                font-size: .7em;
+                margin-left: 2px;
+                width:30%;
+            }
+        }
+    }
+    
+}
+
+//Tablet styles
+
+@media only screen and (min-width:768px) and (max-width: 992px){
+    nav {
+        a{
+            margin:0
+        }
+        div{
+            margin: 0;
+        }
+    }
+    #content{
+        padding:10px;
+        #left-sec{
+            width:35%;
+            height:85vh;
+        }
+        #right-sec{
+            height:85vh;
+            #user_input{
+                display: flex;
+            }
+            
+            #chat_box{
+                height:74vh;
+            }
+        }
+    }
+}

@@ -73,6 +73,7 @@ nav div, nav a {
 }
 #content #user_input {
   margin-top: 5px;
+  display: flex;
 }
 #content #user_input input {
   width: 75%;
@@ -85,7 +86,7 @@ nav div, nav a {
   font-size: 1.2rem;
 }
 #content #user_input button {
-  width: 24.5%;
+  width: 25%;
   color: white;
   height: 50px;
   padding: 10px 20px;
@@ -127,4 +128,72 @@ nav div, nav a {
   color: black;
   justify-self: center;
   padding: 5px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav h1 {
+    display: none;
+  }
+  nav div, nav a {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5px 10px;
+  }
+  #content {
+    padding: 0px;
+  }
+  #content #left-sec {
+    display: none;
+  }
+  #content #right-sec {
+    margin-left: 0;
+    width: 100%;
+  }
+  #content #right-sec #chat_box {
+    height: 79vh;
+  }
+  #content #user_input {
+    display: flex;
+    align-items: center;
+  }
+  #content #user_input input {
+    margin-right: 0;
+    padding: 5px 10px;
+    width: 70%;
+    outline: none;
+    font-size: 1rem;
+  }
+  #content #user_input button {
+    padding: 8px 10px;
+    font-size: 0.7em;
+    margin-left: 2px;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  nav a {
+    margin: 0;
+  }
+  nav div {
+    margin: 0;
+  }
+  #content {
+    padding: 10px;
+  }
+  #content #left-sec {
+    width: 35%;
+    height: 85vh;
+  }
+  #content #right-sec {
+    height: 85vh;
+  }
+  #content #right-sec #user_input {
+    display: flex;
+  }
+  #content #right-sec #chat_box {
+    height: 74vh;
+  }
 }
